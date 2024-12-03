@@ -112,7 +112,7 @@ control SwitchIngress(
 
 
     /*TODO: create register action*/
-    RegisterAction<it<32>, _, bit<32>>(lb_counter) check_counter = {
+    RegisterAction<bit<32>, _, bit<32>>(lb_counter) check_counter = {
         void apply(inout bit<32> value, out bit<32> rv) {
             if(value == 1) {
                 value = 0;
